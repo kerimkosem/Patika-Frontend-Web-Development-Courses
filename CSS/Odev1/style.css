@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    background-color: lightgrey;
+}
+.ana-baslik {
+    color: red;
+    border: brown solid 1px;
+    background-color: lightblue;
+}
+
+
+h2 {
+    color:rgb(9, 74, 172);
+}
+
+h3 {
+    color:orangered;
+}
+div {
+    text-align: left;
+    margin-left:45%;
+}
+article {
+    text-align: center;
+}
+
