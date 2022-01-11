@@ -1,0 +1,43 @@
+.image {
+ text-align: center;
+
+}
+
+section {
+    text-align: center;
+}
+.table {
+   margin-left: auto;
+   margin-right: auto;
+   width: 90%;
+   border: 0;
+ 
+}
+
+.ilksatir {
+    background-color:#EEEEEE;
+
+}
+
+.sutun1 {
+    width: 37%;
+    background-color: #7EE5DA;
+    padding: 10px;
+}
+
+.sutun2 {
+    background-color: #70CCC2;
+    font-size: 13px;
+    width: 20%;
+    padding: 5px;   
+}
+
+.sutun3 {
+    background-color: #62B3AA;
+    font-size: 13px;
+}
+
+footer {
+    font-size: 13px;
+    text-align: center;
+}
