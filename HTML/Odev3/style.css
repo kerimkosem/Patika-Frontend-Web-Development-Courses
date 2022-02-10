@@ -1,0 +1,42 @@
+
+body {
+    background-color: MediumSeaGreen;
+} 
+
+h1 {
+    color:brown;
+}
+
+b {
+    color: brown;
+}
+
+.firstArticle {
+    margin-left: 40%;
+}
+
+.baslik {
+    color: white;
+    border: 2px solid brown;
+    border-radius: 12px;
+    padding: 5px;
+    background-color: brown;
+    font-weight: bold;
+    display: inline;
+}
+
+.paragraf{
+    margin-left: 35%;
+    margin-top: 20px;
+}
+
+.listeler {
+    margin-top: 20px;
+    margin-left: 4%;
+}
+footer {
+    letter-spacing: 2px;
+    color:rgb(48, 38, 38);
+    margin-left: 75%;
+    
+}
