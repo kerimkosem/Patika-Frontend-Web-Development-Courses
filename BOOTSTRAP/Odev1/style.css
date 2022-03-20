@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: #E9ECEF ;
+    background-color: #2879ca ;
 }
 .ana-baslik {
     color: red;
@@ -45,3 +45,7 @@ ul {
     list-style-position: inside;
 }
 
+.jumbotron {
+
+    min-height: 300px;
+}
