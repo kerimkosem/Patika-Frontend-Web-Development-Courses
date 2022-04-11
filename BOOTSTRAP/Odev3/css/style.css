@@ -8,14 +8,18 @@
     max-width: 500px;
     background-color: #eef3f8;
     border: 0;
+
   }
   
   input.searche::placeholder {
     font-size: 14px;
     color: gray;
-    background-image: url(/bootstraplinkedinclone/assets/search-solid.svg);
+    background-image: url(/assets/search-solid.svg);
     background-repeat: no-repeat;
-    background-size: 7%;
+
+    background-size: 9%;
+
+
   }
   
   .body {
@@ -27,8 +31,15 @@
     font-family: Arial, Helvetica, sans-serif;
     color: gray;
     margin-top: 5px;
-    font-weight: lighter;
+    font-weight:bold;
   }
+  .menutext2 {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(133, 133, 133);  
+    margin-top: -4px;
+  }
+
   
   .menutext:hover {
     color: black;
@@ -60,14 +71,17 @@
   input.content {
     border-radius: 40px;
     height: 45px;
+    
   }
   input.content::placeholder {
     font-weight: bolder;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(/bootstraplinkedinclone/assets/edit-regular.svg);
+    background-image: url(/assets/edit-regular.svg);
     background-repeat: no-repeat;
     background-size: auto;
+    padding-left: 25px;
+  
   }
   
   div.card {
@@ -78,6 +92,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: bolder;
+    text-align: center;
   }
   
   .view {
@@ -127,4 +142,31 @@
     font-weight: bold;
     font-size: 14px;
     margin-left: 8px;
+  }
+  .border-bottom-dark{
+
+   border-bottom: 1px solid rgb(203, 197, 195)
+  }
+
+  .left-panel{
+    text-align: center;
+  }
+
+  .left-panel-2{
+    position: sticky;
+    top: 0;
+    overflow:visible;
+  }
+
+  #sticky-left-bar{
+    position: sticky;
+    top:4rem;
+    overflow: visible;
+    
+  }
+  .sticky-right-bar{
+    position: sticky;
+    top:4rem;
+    overflow: visible;
+    
   }
