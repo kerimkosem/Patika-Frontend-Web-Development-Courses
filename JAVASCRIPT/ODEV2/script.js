@@ -1,7 +1,10 @@
-let buttonDOM = document.querySelector("#liveToastBtn")
-let listDOM = document.querySelector("#list")
+
 let taskDOM = document.querySelector("#task")
 let ulLength = document.getElementsByTagName("li")
+
+let buttonDOM = document.querySelector("#liveToastBtn")
+let listDOM = document.querySelector("#list")
+
 
 for (let i = 0; i < ulLength.length; i++ ){
 
@@ -26,20 +29,24 @@ buttonDOM.addEventListener("click", elemanekle)
 
 function elemanekle(){
 
-
-
-    if(taskDOM = ""){
-        $(".error").toast("show")
+    if(taskDOM.value != ""){
+        let toastBasarili = document.querySelector('.success');
+        let toastAlertBasarili = new bootstrap.Toast(toastBasarili);
+        toastAlertBasarili.show();
+        let liDOM = document.createElement("li");
+        listDOM.appendChild(liDOM);
+        liDOM.innerHTML = task.value;
+        taskDOM.innerHTML = "";
+    
     }
-    else
-    {
-        $(".success").toast("show")
+    else{
+        let toastBasarisiz = document.querySelector('.error');
+        let toastAlertBasarisiz = new bootstrap.Toast(toastBasarisiz);
+        toastAlertBasarisiz.show();
     }
 
-    let liDOM = document.createElement("li");
-    listDOM.appendChild(liDOM);
-    liDOM.innerHTML = task.value;
-    taskDOM.value = "";
+
+
 
     liDOM.onclick = check
 
@@ -51,13 +58,6 @@ function elemanekle(){
     liDOM.append(closeButton);
     listDOM.append(liDOM);
     inputElement.value = ("");
-
-
-
-
-
-
-
 
 }
 
