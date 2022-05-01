@@ -81,3 +81,119 @@ const menu = [
       desc: `Red bean paste dessert, serving with honey.`,
     },
   ];
+
+
+  const buttonDOM = document.querySelector(".btn-container")
+  const menuDOM = document.querySelector(".section-center")
+
+  
+
+  let allCategory = menu.map( item => item.category)
+
+  let btnCategory = allCategory.reduce((x,y) => {
+      if(!x.includes(y)){
+          x.push(y)
+      }
+      return x;
+  }, [])
+
+    let categories = ["All", ...btnCategory ]
+
+
+    categories.forEach((category,i) => createButton(category) )
+
+    function createButton(isim){
+        let btn = `<button class="btn btn-outline-dark btn-item" id="${isim.toLowerCase()}">${isim}</button>`
+        buttonDOM.innerHTML += btn
+    }
+
+
+
+    let allBtn = document.querySelector("#all").addEventListener("click", getAll)
+    let allKorea = document.querySelector("#korea").addEventListener("click", getKorea)
+    let allJapan = document.querySelector("#japan").addEventListener("click", getJapan)
+    let allChina = document.querySelector("#china").addEventListener("click", getChina)
+
+
+
+
+    function getAll(){
+
+        menuDOM.innerHTML = ""
+
+       let list = menu.map(item => {
+
+            menuDOM.innerHTML += `<div class="menu-items col-lg-6 col-sm-12">
+            <img src=${item.img} alt=${item.title} class="photo">
+            <div class="menu-info">
+            <div class="menu-title">
+            <h4>${item.title}</h4>
+            <h4 class="price">${item.price}</h4>
+            </div>
+            <div class="menu-text">${item.desc}</div>
+            </div>
+            </div>`
+            
+         })
+        }
+
+    function getKorea(){
+
+        menuDOM.innerHTML = ""
+        let korea = menu.filter( item => item.category === "Korea").map( item => {
+            
+            menuDOM.innerHTML += `<div class="menu-items col-lg-6 col-sm-12">
+            <img src=${item.img} alt=${item.title} class="photo">
+            <div class="menu-info">
+            <div class="menu-title">
+            <h4>${item.title}</h4>
+            <h4 class="price">${item.price}</h4>
+            </div>
+            <div class="menu-text">${item.desc}</div>
+            </div>
+            </div>`
+        })
+        
+
+    }
+    function getJapan(){
+
+        menuDOM.innerHTML = ""
+        let japan = menu.filter( item => item.category === "Japan").map( item => {
+            
+            menuDOM.innerHTML += `<div class="menu-items col-lg-6 col-sm-12">
+            <img src=${item.img} alt=${item.title} class="photo">
+            <div class="menu-info">
+            <div class="menu-title">
+            <h4>${item.title}</h4>
+            <h4 class="price">${item.price}</h4>
+            </div>
+            <div class="menu-text">${item.desc}</div>
+            </div>
+            </div>`
+        })
+        
+
+    }
+
+    function getChina(){
+
+        menuDOM.innerHTML = ""
+        let china = menu.filter( item => item.category === "China").map( item => {
+            
+            menuDOM.innerHTML += `<div class="menu-items col-lg-6 col-sm-12">
+            <img src=${item.img} alt=${item.title} class="photo">
+            <div class="menu-info">
+            <div class="menu-title">
+            <h4>${item.title}</h4>
+            <h4 class="price">${item.price}</h4>
+            </div>
+            <div class="menu-text">${item.desc}</div>
+            </div>
+            </div>`
+        })
+        
+
+    }
+
+  
